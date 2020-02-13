@@ -2,6 +2,7 @@ FROM alexiswl/alpine_conda:4.8.2
 LABEL MAINTAINER="Alexis Lucattini"
 
 ARG CONDA_VERSION="4.8.2"
+ARG XLRD_VERSION="1.2.0"
 ARG PANDAS_VERSION="1.0.1"
 ARG NO_MKL_VERSION="3.0"
 
@@ -17,6 +18,7 @@ RUN conda install --yes \
 	--channel anaconda \
  	--freeze-installed \
         nomkl="${NO_MKL_VERSION}" \
+        xlrd="${XLRD_VERSION}" \
 	pandas="${PANDAS_VERSION}" && \
     find /opt/conda/ -follow -type f -name '*.a' -delete && \
     find /opt/conda/ -follow -type f -name '*.pyc' -delete && \
