@@ -21,3 +21,6 @@ a = z.parse(header=None, sheet_name='foo')
 # Write to an output file
 # Loads pandas.io.formats.csvs
 a.to_csv(tempfile.NamedTemporaryFile().name)
+
+# Read a json string
+pd.read_json(b'{"A": ["1"]}')
