@@ -13,9 +13,9 @@ y = x.query("A==1")['A'].item()
 
 # Import an excel spreadsheet
 # Loads xlrd, xml.etree.cElementTree
-print(Path(os.path.dirname(__file__), "additional_files", "Book1.xlsx"))
 z = pd.ExcelFile(Path(os.path.dirname(__file__), "additional_files", "Book1.xlsx"))
-# Raed in a spreadsheet
+
+# Read in a spreadsheet
 a = z.parse(header=None, sheet_name='foo')
 
 # Write to an output file
