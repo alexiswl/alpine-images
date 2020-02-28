@@ -19,9 +19,12 @@ RUN conda install --yes \
  	--freeze-installed \
         nomkl="${NO_MKL_VERSION}" \
         xlrd="${XLRD_VERSION}" \
-	pandas="${PANDAS_VERSION}" && \
+	    pandas="${PANDAS_VERSION}" && \
     find /opt/conda/ -follow -type f -name '*.a' -delete && \
     find /opt/conda/ -follow -type f -name '*.pyc' -delete && \
-    /opt/conda/bin/conda clean -afy
+    /opt/conda/bin/conda clean -afy && \
+    mkdir /opt/tests
+
+ADD pandas_test.py /opt/tests
 
 ENTRYPOINT ["/opt/conda/bin/python"]
