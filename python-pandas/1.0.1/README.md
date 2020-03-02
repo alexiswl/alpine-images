@@ -17,7 +17,7 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock dslim/docker-slim \
   alexiswl/alpine_pandas:1.0.1 && \
 docker tag \
     alexiswl/alpine_pandas:1.0.1-slim \
-    alexiswl/alpine_pandas:1.0.1-latest && \
+    alexiswl/alpine_pandas:latest-slim && \
 docker push alexiswl/alpine_pandas
 ```
 
