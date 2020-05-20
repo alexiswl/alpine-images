@@ -1,9 +1,9 @@
 FROM alexiswl/alpine_conda:4.8.2
 LABEL MAINTAINER="Alexis Lucattini"
 
-ARG CONDA_VERSION="4.8.2"
+ARG CONDA_VERSION="4.8.3"
 ARG XLRD_VERSION="1.2.0"
-ARG PANDAS_VERSION="1.0.1"
+ARG PANDAS_VERSION="1.0.3"
 ARG NO_MKL_VERSION="3.0"
 
 # Tell Python not to recreate the bytecode files. Since this is a docker image,
@@ -27,4 +27,4 @@ RUN conda install --yes \
 
 ADD tests /opt/tests
 
-ENTRYPOINT ["/opt/conda/bin/python"]
+ENTRYPOINT ["/bin/bash"]

@@ -13,10 +13,10 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock dslim/docker-slim \
   --http-probe=false \
   --mount $PWD/tests/:/mnt/tests \
   --entrypoint /mnt/tests/runner.sh \
-  --tag alexiswl/alpine_pandas:1.0.1-slim \
-  alexiswl/alpine_pandas:1.0.1 && \
+  --tag alexiswl/alpine_pandas:1.0.3-slim \
+  alexiswl/alpine_pandas:1.0.3 && \
 docker tag \
-    alexiswl/alpine_pandas:1.0.1-slim \
+    alexiswl/alpine_pandas:1.0.3-slim \
     alexiswl/alpine_pandas:latest-slim && \
 docker push alexiswl/alpine_pandas
 ```

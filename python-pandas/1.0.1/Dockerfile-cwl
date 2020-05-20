@@ -27,4 +27,4 @@ RUN conda install --yes \
 
 ADD tests /opt/tests
 
-ENTRYPOINT ["/opt/conda/bin/python"]
+ENTRYPOINT ["/bin/bash"]
